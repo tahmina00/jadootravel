@@ -2,10 +2,33 @@
 /* font-family: "Poppins", sans-serif;
 font-family: "Vollkorn", serif; */
 
+/* common  */
 a{
   font-family: "Poppins", sans-serif;
   text-decoration: none; 
 }
+h1, h2{
+   font-family: "Vollkorn", serif; 
+   font-weight: bold;
+}
+h5{
+  font-family: "Poppins", sans-serif;  
+  font-weight:500;
+}
+.sec-head{
+    text-align: center;
+}
+.sec-head h5{
+    font-size:18px;
+    color:#5E6282;
+}
+.sec-head h2{
+    color:#181E4B;
+    font-size:50px;
+}
+
+/*  hero section */
+
 .btn.btn-outline-dark{
 padding:9px 22px;
 }
@@ -14,7 +37,6 @@ padding:9px 22px;
 }
 .navbar{
     font-family: "Poppins", sans-serif; 
-    margin-top:16px;
 }
 .nav-right{
     gap:42px;
@@ -61,14 +83,14 @@ padding:9px 22px;
     font-weight: 500;
     font-family: "Poppins", sans-serif; 
 }
-.playBtn{
+/* .playBtn{
     width:52px;
     height:52px;
     border-radius: 50%;
     background-color: #DF6951;
     display:inline-block;
-}
-.playBtn a{
+} */
+.playBox a{
     color:#686D77;
 }
 .banner-content .btn{
@@ -77,4 +99,58 @@ padding:9px 22px;
     color:white;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+}
+
+.playBtn{
+    width: 52px;
+    height: 52px;
+    background-color: #DF6951;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: animate-pulse 3s linear infinite;
+    cursor: pointer
+}
+@keyframes animate-pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.7),  0 0 0 0 rgba(255,109,74,0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 0 rgba(255,109,74,0.7);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
+    
+}
+/*  category */
+
+#category-part {
+    padding: 111px 0px;
+    display: flex;             /* বক্সগুলোকে পাশাপাশি বসানোর জন্য */
+    justify-content: center;   /* বক্সগুলোকে স্ক্রিনের মাঝে আনার জন্য */
+    align-items: center;       /* ওপর-নিচে সমান লেভেলে আনার জন্য */
+    gap: 30px;                 /* একটি বক্স থেকে অন্য বক্সের দূরত্ব */
+    flex-wrap: wrap;           /* স্ক্রিন ছোট হলে নিচের লাইনে যাওয়ার জন্য */
+}
+
+.category-box {
+    width: 267px;
+    border-radius: 36px;
+    padding: 44px;
+    text-align: center;
+}
+
+.category-box:hover {
+    box-shadow: 0px 2px 8px 0px #000066;
+}
+.category-box p{
+    font-size:16px;
 }
