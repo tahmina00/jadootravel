@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manjari:wght@100;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* font-family: "Poppins", sans-serif;
 font-family: "Vollkorn", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+ /* font-family: "Vollkorn", serif; */
+
 
 /* common  */
 a{
@@ -69,13 +72,42 @@ padding:9px 22px;
     font-size: 18px;
     font-weight: 500;
 }
-.banner-content h1{
+
+/* .banner-content h1{
     color:#181E4B;
     font-size:84px;
     font-weight:700;
     font-family: "Vollkorn", serif;
-    line-height:89px;
+    line-height:80px;
     padding:27px 0px;
+} */
+ .banner-content h1{
+  font-family: 'Volkhov', serif;
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 89px;      /* 89/84 ≈ 1.06 */
+  letter-spacing: -0.04em; /* -4% of font-size = -3.36px */
+  color: #1b1f4b;
+ }
+/* highlight ক্লাসের স্টাইল */
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* লেখার নিচে ব্রাশ/ডেকোরেশন ইমেজটি বসানোর জন্য */
+.highlight::after {
+  content: "";
+  background-image: url('../images/enjoy_text_Decore.png');
+  position: absolute;
+  left: -5px;               
+  bottom: 4px;                  
+  width: 110%;                  
+  height: 12px;                 
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+  z-index: -1;                 
 }
 .banner-content p{
     color:#5E6282;
@@ -134,11 +166,11 @@ padding:9px 22px;
 
 #category-part {
     padding: 111px 0px;
-    display: flex;             
-    justify-content: center;   
-    align-items: center;       
-    gap: 30px;                 
-    flex-wrap: wrap;          
+    display: flex;             /* বক্সগুলোকে পাশাপাশি বসানোর জন্য */
+    justify-content: center;   /* বক্সগুলোকে স্ক্রিনের মাঝে আনার জন্য */
+    align-items: center;       /* ওপর-নিচে সমান লেভেলে আনার জন্য */
+    gap: 30px;                 /* একটি বক্স থেকে অন্য বক্সের দূরত্ব */
+    flex-wrap: wrap;           /* স্ক্রিন ছোট হলে নিচের লাইনে যাওয়ার জন্য */
 }
 
 .category-box {
@@ -153,4 +185,66 @@ padding:9px 22px;
 }
 .category-box p{
     font-size:16px;
+}
+
+/* destination-part */
+
+#destination-part{
+     padding: 111px 0px;
+    display: flex;             /* বক্সগুলোকে পাশাপাশি বসানোর জন্য */
+    justify-content: center;   /* বক্সগুলোকে স্ক্রিনের মাঝে আনার জন্য */
+    align-items: center;       /* ওপর-নিচে সমান লেভেলে আনার জন্য */
+    gap: 30px;                 /* একটি বক্স থেকে অন্য বক্সের দূরত্ব */
+    flex-wrap: wrap;           /* স্ক্রিন ছোট হলে নিচের লাইনে যাওয়ার জন্য */
+}
+
+/* ১. মূল কন্টেইনার কার্ড */
+.destination-box {
+  background-color: #ffffff;
+  border-radius: 44px;
+  overflow: hidden;                   /* ছবি যেন কার্ভ কর্নার থেকে বের না হয়ে যায় */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height:457px;
+}
+
+.destination-box:hover {
+  transform: translateY(-8px);        /* হোভার করলে কার্ড সামান্য উপরে উঠবে */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ২. ইমেজ ফিক্সড সাইজ */
+ .destination-box img {
+  width: 100%;
+  height: 327px;     /* 457-130 */                 /* ৩টি ছবির উচ্চতাই একই রাখতে */
+  object-fit: cover;                  /* ছবি চ্যাপ্টা না হয়ে সুন্দরভাবে ফিট হবে */
+  display: block;
+  padding-top:8px;
+} 
+
+
+
+/* ৩. টেক্সট সেকশন (নিচের ইনফরমেশন) */
+.destination-box span {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E1D4C;
+  text-transform: capitalize;
+  padding: 20px 20px 5px 20px;
+}
+
+.destination-box .small-text {
+  font-size: 14px;
+  color: #5E6282;
+  padding: 0 20px 20px 20px;
+  margin: 0;
+}
+/* ২. ন্যাভিগেশন ছোট আইকনের স্টাইল (Specificity বাড়িয়ে ওভাররাইড করা হলো) */
+.destination-box img.nav-icon {
+  width: 16px !important;
+  height: 16px !important;
+  display: inline-block !important;
+  margin-right: 8px;
+  vertical-align: middle;
 }
