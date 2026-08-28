@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+    .container {
+        --bs-gutter-x: 2.5rem !important;
+    }
+
+    ul.navbar-nav.mx-auto.mb-2.mb-lg-0 {
+        gap: 10px;
+    }
+
+    #category-part {
+        padding: 60px 0px;
+    }
+    .banner-content{
+        z-index:10;
+        position:relative;
+    }
+
+    .banner-content h1 {
+        font-size: 50px;
+        line-height: 40px;
+        padding: 15px 0px;
+    }
+
+    .banner-content .btn {
+        padding: 13px 15px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .sec-head h5 {
+        font-size: 14px;
+    }
+
+    .sec-head h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-content h1 {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 15px 0px;
+    }
+
+    .category-box {
+        width: 100%;
+    }
+}
+
