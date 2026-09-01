@@ -248,3 +248,7 @@ padding:9px 22px;
   margin-right: 8px;
   vertical-align: middle;
 }
+
+.carousel-control-next-icon{
+    background-image: url('../images/chevron-up-solid-full.svg');
+}
